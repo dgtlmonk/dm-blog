@@ -1,0 +1,13 @@
+{
+  "name": "livereload-template",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "*",
+    "grunt-express": "*",
+    "grunt-open": "*",
+    "matchdep": "~0.1.2",
+    "ui-router": "0.0.1"
+   }
+}
