@@ -12,8 +12,6 @@ module.exports = function(grunt) {
                         port:9000,
                         hostname:"0.0.0.0",
                         bases: ['public','public/app'], // path to document root
-
-
                         livereload: true,
                      }
                  }
@@ -26,20 +24,66 @@ module.exports = function(grunt) {
                    }
             },
 
+            stylus:{
+                compile:{
+                        options : {
+                            compress: false,
+                            watch: true,
+                            import: [], // import files
+                        },
+
+                         files : { 'public/app/css/style.css':'public/app/styles/style.styl' },
+
+                    }
+
+            },
+
+            compass: {
+                dist: {
+                    options:{
+                        //style:'compress',
+                        // compass:true
+                        sassDir:'public/app/styles/',
+                        cssDir:'public/app/css/',
+                        watch: true
+                    },
+
+                  // files: {
+                   //     'public/app/css/style.css':'public/app/styles/style.scss'
+                   // }
+
+                    /*files : [ {
+                        expand:true,
+                        cwd:'public/app/styles/',
+                        src:['*.scss'],
+                        dest:'public/app/css',
+                        ext:'.css'
+                    }]*/
+                }
+            },
 
             // grunt watch will monitor the project files
             watch:{
-                all: {
-                    files :['index.html'],
-                    options: {
-                        livereload:true
-                    }
+                options:{ livereload:true,},
+
+               stylus:{
+                   files: 'public/app/styles/*.styl',
+                    task:['stylus']
+                },
+
+                styles:{
+                    files: ['public/app/styles/*.scss', 'public/app/styles/*.styl'],
+                    task:['compass','stylus']
+                },
+
+                html: {
+                    files: ['index.html'] // no tasks, just live reload
                 }
-        }
+          }
     });
 
      grunt.registerTask('serve',[
-        'express',
+        'express','compass','stylus',
         // 'open',
         'watch'
      ]);
