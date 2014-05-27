@@ -8,43 +8,4 @@ body {
 }
 
 
-// Media Queries in EM
-// $target_px / 16px  : $em;
-//
-// Layout Reference
-// http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-
-
-$_q_smartphones: "only screen and (min-device-width : 320px) and (max-device-width : 480px)";
-$q_smartphones: "only screen and (min-device-width : 20em) and (max-device-width : 30em)";
-
-$_q_tablets: "only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
-$q_tablets: "only screen and (min-device-width : 48em) and (max-device-width : 64em)";
-
-$_q_desktop: "only screen and (min-width : 1224px)";
-$q_desktop: "only screen and (min-width : 76.5em)";
-
-
-/* Smartphones (portrait and landscape) -----------  */
-@media #{$q_smartphones}, screen and (min-width:30em) and (max-width:30em) {
-    body {
-       background: pink;
-     }
-}
-
-
-/* iPads (portrait and landscape) -----------  */
-@media #{$q_tablets}, screen and (min-width:30em) and (max-width:64em) {
-    body {
-      background:#e21;
-    }
-}
-
-/*  Desktops and laptops -----------  */
-@media #{$q_desktop}, screen and (min-width: 64em){
-    body {
-      background:#999;
-    }
-}
-
 

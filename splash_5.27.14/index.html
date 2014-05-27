@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>blog/portfolio site of joel pablo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    
+    <style type="text/css" media="screen">
+        body {
+            background:#000;
+            margin:0;
+            padding:0;
+            font-family: 'Roboto', sans-serif;
+            font-size:.7em;
+        }
+
+        .container {
+            margin-top:2em;
+            text-align:center;
+            color:#fff;
+        }
+
+        img {
+            clear:both;
+        }
+
+        span.reverse { unicode-bidi:bidi-override; direction: rtl; }
+
+    </style>
+ </head>
+<body>
+
+
+<script type="text/javascript" charset="utf-8">
+    
+    // Sneaky? :P
+    
+    'use strict';
+    //document.body.onload = digitalmonkStudioize;
+  
+    (function ($node) {
+        var email = 'moc.oidutsknomlatigid@tlusnoc';
+        var containerDiv = document.createElement('div');
+        var logo = document.createElement('img');
+            logo.src = 'images/dm-logo.jpg';
+            containerDiv.appendChild(logo);
+
+        var copyDiv = document.createElement('div');
+            copyDiv.innerHTML = '... and anything in between. Collective Works and Blog of Joel Pablo </br><span style="color:red;">Working on new face :-) </span></br><span class="reverse">' + email+ '</span>';
+            containerDiv.appendChild(copyDiv);
+            containerDiv.className = 'container';
+
+            $node.appendChild(containerDiv);
+     })(document.body);
+   
+</script>
+
+</body>
+</html>
