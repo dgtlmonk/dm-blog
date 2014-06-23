@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     sass = require('gulp-sass'),
+    lr = require('gulp-livereload'),
+    //  watch = require('gulp-watch'),
     connect = require('gulp-connect');
 
 
@@ -33,19 +35,15 @@ gulp.task('connect', function () {
 })
 
 // define task
-
-gulp.task('stylus',function(){
-    return gulp.src(paths.stylus_src)
-        .pipe(stylus({errors:true}))
-        .pipe(gulp.dest(paths.styles_dest))
-        .pipe(connect.reload());
-})
-
 gulp.task('sass',function(){
     return gulp.src(paths.sass_src)
-        .pipe(sass())
+        .pipe(sass({
+            lineNumbers: true,
+            style:'expanded'
+        }))
         .pipe(gulp.dest(paths.styles_dest))
-        .pipe(connect.reload());
+
+     //   .pipe(connect.reload());
 })
 
 
@@ -54,17 +52,20 @@ gulp.task('scripts', function () {
     return gulp.src(paths.js)
     .pipe(uglify())
     .pipe(gulp.dest('./app/build/scripts'))
-    .pipe(connect.reload());
+   // .pipe(connect.reload());
 });
 
 gulp.task('html', function(){
     gulp.src(paths.html)
-    .pipe(connect.reload());
+   // .pipe(connect.reload());
 });
 
 gulp.task('watch', function (argument) {
+    lr.listen();
     gulp.watch(paths.html,['html']);
     gulp.watch(paths.sass_src,['sass']);
+    gulp.watch([paths.sass_src, paths.html]).on('change', lr.changed);
+
 });
 
 gulp.task('default',['sass','watch','connect']);
