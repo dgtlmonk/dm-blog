@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     sass = require('gulp-sass'),
     lr = require('gulp-livereload'),
-    //  watch = require('gulp-watch'),
+    plumber = require('gulp-plumber'),
     connect = require('gulp-connect');
 
 

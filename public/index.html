@@ -6,21 +6,35 @@
     <title>Digitalmonk Studio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Exo:800,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./app/styles/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
-
-        <header class=''>
+        <header class='center'>
             <div class='header-logo'>
               
             </div>
-            
+            <nav>
+                <ul class='header-nav'>
+                    <li>Blog</li>
+                    <li>Collective Works</li>
+                    <li>About</li>
+                </ul>
+            </nav>
         </header>
-        
-        <div class='main' ui-view>
-        
-       </div>
 
+        <div class="content-wrapper" ui-view> 
+            <article class='blog-entry'>
+                <header class='blog-title'>Markdown with ShowdownJS</header>
+                <div class='blog-entry-tag'> [1]A [2]N </div>
+                <section>
+                Aenean aliquet fermentum lectus eget egestas. Mauris condimentum nisl in augue iaculis, commodo placerat nunc varius. Mauris sollicitudin turpis pulvinar sodales fringilla. Proin id sodales nulla. Mauris placerat ipsum non arcu bibendum, auctor faucibus nisl eleifend.
+                </section>
+                
+            </article>
+        </div>
+        
 
         <script data-main='./app/app-config.js' src='./app/vendor/requirejs/require.js'></script>
     </body>

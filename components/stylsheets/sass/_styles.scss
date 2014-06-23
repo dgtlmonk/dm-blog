@@ -1,10 +1,46 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$font-stack: 'Titillium Web', sans-serif;
+$primary-color: #fff;
+$background-color: #000;
 
 body {
     font: 100% $font-stack;
-    margin: 10px;
+    color: $primary-color;
+    background:#fff;
+    margin:0;
+    padding:0;
 }
 
+.blog-entry { 
+    header.blog-title {
+        font-family:'Exo', sans-serif;
+        font-size:1.4em;
+        color:#96172F;
+        color: rgba(0,0,0,0.7);
+        background:none;
+        text-align:left;
+        font-style:italic;
+        text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
+    }
+    
+    .blog-entry-tag {
+        font-size:.7em;
+        color:#333;
+    }
 
+    section {
+        font: 100% $font-stack;
+        font-size:.8em;
+        color:#333;
+        line-height:1.4em;
+        text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
 
+    }
+
+   font-weight:600;
+    padding:.1em;
+    padding-left:.6em;
+}
+
+header {
+    background:#000;
+}
