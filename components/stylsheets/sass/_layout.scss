@@ -21,6 +21,20 @@ $q_desktop: "only screen and (min-width : 76.5em)";
     body {
        background: pink;
      }
+
+     header {
+        width:100%;
+        display:table-cell;
+        text-align:center;
+    }
+
+    .header-logo {
+        position:relative;
+        left:7em;
+        width:150px;
+        height:150px;
+        border:1px solid;
+    }
 }
 
 
@@ -56,4 +70,5 @@ $q_desktop: "only screen and (min-width : 76.5em)";
     border:0;
     margin:0;
 }
+
 
