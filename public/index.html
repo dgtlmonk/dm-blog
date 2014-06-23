@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app='dmBlog'>
+<html>
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +11,13 @@
     <body>
        <div class='' ui-view>
           test
-       </div>
+        </div>
        
 
-        <script src='./app/vendor/angular/angular.min.js'></script>
-        <script src='./app/vendor/angular-ui-router/release/angular-ui-router.min.js'></script>
-        <script src='./app/vendor/enquire/dist/enquire.min.js'></script>
-        <script src='./app/app.js'></script>
+      
+        <script data-main='./app/app-config.js' src='./app/vendor/requirejs/require.js'></script>
 
+    
     </body>
 </html>
 
