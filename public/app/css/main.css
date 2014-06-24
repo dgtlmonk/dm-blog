@@ -57,9 +57,7 @@ header {
 .blog-entry-tag li {
   list-style: none;
   display: inline;
-  background: #f6444e;
-  color: #fff;
-  padding: 0.5em; }
+  padding: 0.4em; }
 
 /* for high resolution display */
 @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { }
@@ -70,11 +68,9 @@ header {
     width: 100%;
     text-align: center; }
   .header-logo {
-    width: 222px;
-    height: 156px;
-    background: #999;
     display: inline-block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    background: #000 url(../../assets/images/logo.png) no-repeat; }
   .header-nav {
     margin-top: -1em; }
   ul.header-nav-menu {
@@ -85,8 +81,6 @@ header {
   .header-signature {
     padding: 2em; }
   .header-logo {
-    width: 150px;
-    height: 150px;
     background: #999;
     float: left;
     margin-right: 1em; }
@@ -128,3 +122,8 @@ ul.header-nav-menu li {
   display: inline;
   margin: 0.5em;
   padding: 0; }
+
+.header-logo {
+  width: 222px;
+  height: 156px;
+  background: #999; }

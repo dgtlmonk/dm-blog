@@ -32,12 +32,9 @@ $retina: "only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-
     }
 
     .header-logo {
-        width:222px;
-        height:156px;
-        background:#999;
         display:inline-block;
         margin: 0 auto;
-       // background:#000 url(../../assets/images/logo.png) no-repeat;
+        background:#000 url(../../assets/images/logo.png) no-repeat;
     }
 
     .header-nav {
@@ -60,8 +57,6 @@ $retina: "only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-
     }
 
     .header-logo {
-        width:150px;
-        height:150px;
         background:#999;
         float:left;
         margin-right:1em;
@@ -124,3 +119,9 @@ ul.header-nav-menu li {
     padding:0;
 }
 
+.header-logo {
+    width:222px;
+    height:156px;        
+    background:#999;
+
+}
