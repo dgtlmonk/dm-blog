@@ -50,6 +50,21 @@ $q_desktop: "only screen and (min-width : 76.5em)";
         margin-right:1em;
     }
 
+    header.main {
+        zoom: 1;
+        padding-bottom:1em;
+    }
+
+    header.main:before,
+    header.main:after {
+        content: "";
+        display: table;
+    }
+    header.main:after {
+        clear: both;
+    }
+
+
 }
 
 /*  Desktops and laptops -----------  */

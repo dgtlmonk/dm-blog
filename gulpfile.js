@@ -12,7 +12,7 @@ var paths = {
      images:[],
 
     stylus_src:['./components/stylsheets/stylus/*.styl'],
-    styles_dest:'./public/app/styles/',
+    styles_dest:'./public/app/css/',
 
     sass_src:['./components/stylsheets/sass/*.scss'],
 

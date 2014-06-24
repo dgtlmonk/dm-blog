@@ -23,7 +23,7 @@ body {
     color: #333; }
   .blog-entry section {
     font: 100% 'Titillium Web', sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     color: #333;
     line-height: 1.4em;
     text-shadow: 2px 1px 3px rgba(255, 255, 255, 0.1); }
@@ -52,7 +52,15 @@ header {
     height: 150px;
     background: #999;
     float: left;
-    margin-right: 1em; } }
+    margin-right: 1em; }
+  header.main {
+    zoom: 1;
+    padding-bottom: 1em; }
+  header.main:before, header.main:after {
+    content: "";
+    display: table; }
+  header.main:after {
+    clear: both; } }
 
 /*  Desktops and laptops -----------  */
 @media only screen and (min-width : 76.5em), screen and (min-width: 64em) {
