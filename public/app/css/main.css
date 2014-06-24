@@ -31,22 +31,59 @@ body {
 header {
   background: #000; }
 
+.header-signature {
+  color: #d94d43;
+  font-size: 0.8em;
+  line-height: 2em; }
+
+.header-signature a {
+  color: #d94d43;
+  font-size: 1em;
+  text-decoration: none; }
+
+.header-signature a:hover {
+  color: #f76b39;
+  text-decoration: underline; }
+
+.header-signature-contact {
+  line-height: 1.3em; }
+
+.header-signature-service {
+  color: #d94d43; }
+
+.blog-entry-tag ul {
+  padding: 0; }
+
+.blog-entry-tag li {
+  list-style: none;
+  display: inline;
+  background: #f6444e;
+  color: #fff;
+  padding: 0.5em; }
+
+/* for high resolution display */
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { }
+
 /* Smartphones (portrait and landscape) -----------  */
 @media only screen and (min-device-width : 20em) and (max-device-width : 30em), screen and (min-width: 20em) and (max-width: 30em) {
   header {
     width: 100%;
     text-align: center; }
   .header-logo {
-    width: 150px;
-    height: 150px;
+    width: 222px;
+    height: 156px;
     background: #999;
     display: inline-block;
     margin: 0 auto; }
-  ul.header-nav {
+  .header-nav {
+    margin-top: -1em; }
+  ul.header-nav-menu {
     padding: 1em; } }
 
 /* iPads (portrait and landscape) -----------  */
 @media only screen and (min-device-width : 48em) and (max-device-width : 64em), screen and (min-width: 30em) and (max-width: 64em) {
+  .header-signature {
+    padding: 2em; }
   .header-logo {
     width: 150px;
     height: 150px;
@@ -84,10 +121,10 @@ header {
 .center {
   margin: 0 auto; }
 
-ul.header-nav {
+ul.header-nav-menu {
   list-style: none; }
 
-ul.header-nav li {
+ul.header-nav-menu li {
   display: inline;
   margin: 0.5em;
   padding: 0; }

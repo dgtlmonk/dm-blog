@@ -44,3 +44,40 @@ body {
 header {
     background:#000;
 }
+
+.header-signature {
+    color:#d94d43;
+    font-size:.8em;
+    line-height:2em;
+}
+
+.header-signature a {
+    color:#d94d43;
+    font-size:1em;
+    text-decoration:none;
+}
+
+.header-signature a:hover {
+    color:#f76b39;
+    text-decoration:underline;
+}
+
+.header-signature-contact {
+    line-height:1.3em;
+}
+
+.header-signature-service {
+    color:#d94d43;
+}
+
+.blog-entry-tag ul {
+    padding:0;
+}
+
+.blog-entry-tag li {
+    list-style:none;
+    display: inline;
+    background:#f6444e;
+    color:#fff;
+    padding:.5em;
+}

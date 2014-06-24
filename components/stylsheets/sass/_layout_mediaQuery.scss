@@ -16,6 +16,14 @@ $_q_desktop: "only screen and (min-width : 1224px)";
 $q_desktop: "only screen and (min-width : 76.5em)";
 
 
+$retina: "only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2)";
+
+
+/* for high resolution display */
+@media #{$retina}, only screen and (min-device-pixel-ratio: 2) {
+
+}
+
 /* Smartphones (portrait and landscape) -----------  */
 @media #{$q_smartphones}, screen and (min-width:20em) and (max-width:30em) { 
      header {
@@ -24,14 +32,19 @@ $q_desktop: "only screen and (min-width : 76.5em)";
     }
 
     .header-logo {
-        width:150px;
-        height:150px;
+        width:222px;
+        height:156px;
         background:#999;
         display:inline-block;
         margin: 0 auto;
+       // background:#000 url(../../assets/images/logo.png) no-repeat;
     }
 
-    ul.header-nav {
+    .header-nav {
+        margin-top:-1em;
+    }
+
+    ul.header-nav-menu {
         padding:1em;
     }
 
@@ -41,7 +54,11 @@ $q_desktop: "only screen and (min-width : 76.5em)";
 
 /* iPads (portrait and landscape) -----------  */
 @media #{$q_tablets}, screen and (min-width:30em) and (max-width:64em) {
-       
+    
+    .header-signature {
+        padding:2em;
+    }
+
     .header-logo {
         width:150px;
         height:150px;
@@ -97,11 +114,11 @@ $q_desktop: "only screen and (min-width : 76.5em)";
     margin: 0 auto;
 }
 
-ul.header-nav {
+ul.header-nav-menu {
    list-style:none;
 }
 
-ul.header-nav li {
+ul.header-nav-menu li {
     display:inline;
     margin:.5em;
     padding:0;
