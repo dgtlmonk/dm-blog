@@ -1,28 +1,27 @@
 $font-stack: 'Titillium Web', sans-serif;
-$primary-color: #fff;
+$primary-text-color: #fff;
+$secondary-text-color: #000;
 $background-color: #000;
+
+$signature-color:#d94d43;
 
 $header-font-family: 'Exo', sans-serif;
 $header-font-size: 1.4em;
 
-header {
-    background:$background-color;
-}
-
-
 body {
     font: 100% $font-stack;
-    color: $primary-color;
     background:#fff;
     margin:0;
     padding:0;
+}
+header.main {
+    background:$background-color;
 }
 
 .blog-entry { 
     header.blog-title {
         font-family:$header-font-family;
         font-size:$header-font-size;
-        color:#96172F;
         color: rgba(0,0,0,0.7);
         background:none;
         text-align:left;
@@ -44,19 +43,19 @@ body {
     }
 
    font-weight:600;
-    padding:.1em;
-    padding-left:.6em;
+   padding:.1em;
+   padding-left:.6em;
 }
 
 
 .header-signature {
-    color:#d94d43;
+    color:$signature-color;
     font-size:.8em;
     line-height:2em;
 }
 
 .header-signature a {
-    color:#d94d43;
+    color:$signature-color;
     font-size:1em;
     text-decoration:none;
 }
@@ -71,7 +70,7 @@ body {
 }
 
 .header-signature-service {
-    color:#d94d43;
+    color:$signature-color;
 }
 
 .blog-entry-tag ul {
@@ -86,12 +85,20 @@ body {
     padding:.4em;
 }
 
-.about {
-    header {
-        background:none;
-        color:#000;
+section.about {
+    color:$secondary-text-color;
+    padding:0.6em;
+
+    header {      
         font-family:$header-font-family;
         font-size:$header-font-size;
+        color: rgba(0,0,0,0.7);
+        background:none;
+        text-align:left;
         font-style:italic;
+        text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
     }
 }
+
+/* END STYLES CSS -----------  */
+

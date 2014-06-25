@@ -1,12 +1,11 @@
-header {
-  background: #000; }
-
 body {
   font: 100% 'Titillium Web', sans-serif;
-  color: #fff;
   background: #fff;
   margin: 0;
   padding: 0; }
+
+header.main {
+  background: #000; }
 
 .blog-entry {
   font-weight: 600;
@@ -15,7 +14,6 @@ body {
   .blog-entry header.blog-title {
     font-family: 'Exo', sans-serif;
     font-size: 1.4em;
-    color: #96172F;
     color: rgba(0, 0, 0, 0.7);
     background: none;
     text-align: left;
@@ -59,13 +57,19 @@ body {
   display: inline;
   padding: 0.4em; }
 
-.about header {
-  background: none;
+section.about {
   color: #000;
-  font-family: 'Exo', sans-serif;
-  font-size: 1.4em;
-  font-style: italic; }
+  padding: 0.6em; }
+  section.about header {
+    font-family: 'Exo', sans-serif;
+    font-size: 1.4em;
+    color: rgba(0, 0, 0, 0.7);
+    background: none;
+    text-align: left;
+    font-style: italic;
+    text-shadow: 2px 1px 3px rgba(255, 255, 255, 0.1); }
 
+/* END STYLES CSS -----------  */
 /* for high resolution display */
 @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { }
 
@@ -123,7 +127,8 @@ body {
   margin: 0 auto; }
 
 ul.header-nav-menu {
-  list-style: none; }
+  list-style: none;
+  color: #fff; }
 
 ul.header-nav-menu li {
   display: inline;
