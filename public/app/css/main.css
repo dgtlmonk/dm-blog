@@ -1,3 +1,6 @@
+header {
+  background: #000; }
+
 body {
   font: 100% 'Titillium Web', sans-serif;
   color: #fff;
@@ -28,9 +31,6 @@ body {
     line-height: 1.4em;
     text-shadow: 2px 1px 3px rgba(255, 255, 255, 0.1); }
 
-header {
-  background: #000; }
-
 .header-signature {
   color: #d94d43;
   font-size: 0.8em;
@@ -58,6 +58,13 @@ header {
   list-style: none;
   display: inline;
   padding: 0.4em; }
+
+.about header {
+  background: none;
+  color: #000;
+  font-family: 'Exo', sans-serif;
+  font-size: 1.4em;
+  font-style: italic; }
 
 /* for high resolution display */
 @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { }

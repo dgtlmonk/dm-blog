@@ -31,7 +31,7 @@ var paths = {
     coffee_app_bootstrap_dest:'public/app',
     coffee_app_scripts_dest:'public/app/scripts',
 
-    html:['./public/*.html'],
+    html:['./public/*.html','./public/app/partials/**/*.html'],
     js:['./app/scripts/*.js'],
     build_js:['./app/build/scripts/']
 }

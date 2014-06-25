@@ -2,6 +2,14 @@ $font-stack: 'Titillium Web', sans-serif;
 $primary-color: #fff;
 $background-color: #000;
 
+$header-font-family: 'Exo', sans-serif;
+$header-font-size: 1.4em;
+
+header {
+    background:$background-color;
+}
+
+
 body {
     font: 100% $font-stack;
     color: $primary-color;
@@ -12,8 +20,8 @@ body {
 
 .blog-entry { 
     header.blog-title {
-        font-family:'Exo', sans-serif;
-        font-size:1.4em;
+        font-family:$header-font-family;
+        font-size:$header-font-size;
         color:#96172F;
         color: rgba(0,0,0,0.7);
         background:none;
@@ -33,7 +41,6 @@ body {
         color:#333;
         line-height:1.4em;
         text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
-
     }
 
    font-weight:600;
@@ -41,9 +48,6 @@ body {
     padding-left:.6em;
 }
 
-header {
-    background:#000;
-}
 
 .header-signature {
     color:#d94d43;
@@ -80,4 +84,14 @@ header {
    // background:#f6444e;
    // color:#fff;
     padding:.4em;
+}
+
+.about {
+    header {
+        background:none;
+        color:#000;
+        font-family:$header-font-family;
+        font-size:$header-font-size;
+        font-style:italic;
+    }
 }
