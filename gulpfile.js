@@ -5,7 +5,14 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     connect = require('gulp-connect'),
     coffee = require('gulp-coffee'),
+    sourcemaps = require('gulp-sourcemaps'),
     merge = require('merge-stream');
+
+
+
+var onError = function (err){
+    console.log(err);
+}
 
 
 // paths
@@ -20,9 +27,9 @@ var paths = {
 
     // coffee
     coffee_app_bootstrap_src:['./components/coffee/*.coffee'],
-    coffee_app_scripts_src:['./components/coffee/scripts/*.coffee'],
-    coffee_app_bootstrap_dest:['public/app'],
-    coffee_app_scripts_dest:['public/app/scripts'],
+    coffee_app_scripts_src:['./components/coffee/scripts/*.coffee','./components/coffee/scripts/**/*.coffee'],
+    coffee_app_bootstrap_dest:'public/app',
+    coffee_app_scripts_dest:'public/app/scripts',
 
     html:['./public/*.html'],
     js:['./app/scripts/*.js'],
@@ -41,6 +48,9 @@ gulp.task('connect', function () {
 // define tasks
 gulp.task('sass',function(){
     return gulp.src(paths.sass_src)
+        .pipe(plumber({
+            errorHandler: onError
+        }))
         .pipe(sass({
             lineNumbers: true,
             style:'expanded'
@@ -50,14 +60,24 @@ gulp.task('sass',function(){
 
 gulp.task('coffee', function (){
     var bootstrap = gulp.src(paths.coffee_app_bootstrap_src )
+                    .pipe(plumber({
+                       errorHandler: onError
+                     }))
                     .pipe(coffee({
                         bare:true
                     }))
                     .pipe(gulp.dest(paths.coffee_app_bootstrap_dest))
 
     var scripts = gulp.src(paths.coffee_app_scripts_src)
+                  .pipe(sourcemaps.init())
+                  .pipe(plumber({
+                    errorHandler: onError
+                   }))
                   .pipe(coffee({
                       bare:true
+                  }))
+                  .pipe(sourcemaps.write({
+                      addComment: false
                   }))
                   .pipe(gulp.dest(paths.coffee_app_scripts_dest))
 
