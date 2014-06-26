@@ -27,6 +27,7 @@ header.main {
         text-align:left;
         font-style:italic;
         text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
+        border-bottom: solid 4px #e3e3e3;
     }
     
     .blog-entry-tag {
@@ -43,8 +44,8 @@ header.main {
     }
 
    font-weight:600;
-   padding:.1em;
-   padding-left:.6em;
+   padding:.6em;
+   padding-top:0;
 }
 
 
@@ -88,6 +89,7 @@ header.main {
 section.about {
     color:$secondary-text-color;
     padding:0.6em;
+    padding-top:0;
 
     header {      
         font-family:$header-font-family;
@@ -97,8 +99,40 @@ section.about {
         text-align:left;
         font-style:italic;
         text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
+
+       }
+}
+
+
+section.about, section.collective-works { 
+    color:$secondary-text-color;
+    padding:0.6em;
+    padding-top:0;
+
+    header {      
+        font-family:$header-font-family;
+        font-size:$header-font-size;
+        color: rgba(0,0,0,0.7);
+        background:none;
+        text-align:left;
+        font-style:italic;
+        text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
+      }
+}
+
+
+header.about-title, header.collective-works-title {
+      border-bottom: solid 4px #e3e3e3;
+      margin-bottom:.5em;
+}
+
+.header-nav-menu {
+    a {
+        text-decoration:none;
+        color:#fff;
     }
 }
+
 
 /* END STYLES CSS -----------  */
 

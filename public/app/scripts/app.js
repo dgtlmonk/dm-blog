@@ -9,6 +9,9 @@ define(['angular', 'angular-route', 'angular-ui-router'], function(angular) {
     }).state('about', {
       url: '/about',
       templateUrl: '../app/partials/about/about.html'
+    }).state('collective-works', {
+      url: '/collective-works',
+      templateUrl: '../app/partials/collective-works/collective-works.html'
     });
   });
   return app;
