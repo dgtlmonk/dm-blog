@@ -5,7 +5,9 @@ $background-color: #000;
 
 $signature-color:#d94d43;
 
-$header-font-family: 'Overlock', cursive;
+$header-font-family: 'Exo', sans-serif;
+
+//'Overlock', cursive;
 //'Exo', sans-serif;
 $header-font-size: 1.6em;
 
@@ -39,12 +41,13 @@ header.main {
     }
 
     section {
-        font: 100% $font-stack;
-        font-size:1em;
+        font: 100% 'Ubuntu', sans-serif;
+        font-size:.9em;
         color:#333;
         line-height:1.4em;
         text-shadow: 2px 1px 3px rgba(255,255,255,0.1);
         margin-bottom:.4em;
+        font-weight:300;
     }
 
    font-weight:600;

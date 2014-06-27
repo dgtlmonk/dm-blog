@@ -12,7 +12,7 @@ header.main {
   padding: 0.6em;
   padding-top: 0; }
   .blog-entry header.blog-title {
-    font-family: 'Overlock', cursive;
+    font-family: 'Exo', sans-serif;
     font-size: 1.6em;
     color: rgba(0, 0, 0, 0.8);
     background: none;
@@ -23,12 +23,13 @@ header.main {
     font-size: 0.7em;
     color: #333; }
   .blog-entry section {
-    font: 100% 'Titillium Web', sans-serif;
-    font-size: 1em;
+    font: 100% 'Ubuntu', sans-serif;
+    font-size: 0.9em;
     color: #333;
     line-height: 1.4em;
     text-shadow: 2px 1px 3px rgba(255, 255, 255, 0.1);
-    margin-bottom: 0.4em; }
+    margin-bottom: 0.4em;
+    font-weight: 300; }
 
 article {
   margin-bottom: 0.6em; }
@@ -73,7 +74,7 @@ section.about, section.collective-works {
   font-weight: 300; }
 
 header.about-title, header.collective-works-title {
-  font-family: 'Overlock', cursive;
+  font-family: 'Exo', sans-serif;
   font-size: 1.6em;
   color: rgba(0, 0, 0, 0.8);
   background: none;
@@ -196,4 +197,4 @@ ul.header-nav-menu li {
 .header-logo {
   width: 222px;
   height: 156px;
-  background: #999; }
+  background: #999 url(../../assets/images/logo.png); }
