@@ -4,7 +4,9 @@ require.config({
         'angular-ui-router':'./vendor/angular-ui-router/release/angular-ui-router',
         'domReady':'./vendor/requirejs-domready/domReady',
         'angular-route':'./vendor/angular-route/angular-route',
-        'angular-ui-router':'./vendor/angular-ui-router/release/angular-ui-router'
+        'angular-ui-router':'./vendor/angular-ui-router/release/angular-ui-router',
+        'navigation':'./scripts/controllers/navigation/index',
+        'navigation-ctrl':'./scripts/controllers/navigation/navigation-ctrl'
     },
 
     shim: {
@@ -17,7 +19,6 @@ require.config({
         'angular-ui-router': {
             exports:'angular-ui-router'
         }
-
     },
 
     // kickstart

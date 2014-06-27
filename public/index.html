@@ -23,10 +23,10 @@
                 </div>
             </div>
             <nav class='header-nav'>
-                <ul class='header-nav-menu'>
-                    <li class='active-nav'><a href='/'>Blog</a></li>
-                    <li><a href='#/collective-works'>Collective Works</a></li>
-                    <li><a href="#/about">About</a></li>
+                <ul class='header-nav-menu' ng-controller='NavigationCtrl'>
+                    <li ng-class="navClass('')"><a href='/'>Blog</a></li>
+                    <li ng-class="navClass('collective-works')"><a href='#/collective-works'>Collective Works</a></li>
+                    <li ng-class="navClass('about')"><a href="#/about">About</a></li>
                 </ul>
             </nav>
         </header>
