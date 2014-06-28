@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    stylus = require('gulp-stylus'),
     sass = require('gulp-sass'),
     lr = require('gulp-livereload'),
     plumber = require('gulp-plumber'),
