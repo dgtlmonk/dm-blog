@@ -1,1 +1,0 @@
-define(['navigation-ctrl'], function() {});

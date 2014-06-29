@@ -1,2 +1,0 @@
-define ['navigation-ctrl'], ->
-    return

@@ -1,3 +1,0 @@
-define ['showdown-markup'], ->
-    return
-

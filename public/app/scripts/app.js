@@ -1,4 +1,4 @@
-define(['angular', 'angular-route', 'angular-ui-router', 'navigation', 'showdown-markup-bootstrap'], function(angular) {
+define(['angular', 'angular-route', 'angular-ui-router', 'dm.base.controllers', 'dm.base.directives'], function(angular) {
   var app;
   app = angular.module('digitalmonkstudio', ['ui.router', 'digitalmonkstudio.controllers']);
   app.config(function($stateProvider, $urlRouterProvider) {

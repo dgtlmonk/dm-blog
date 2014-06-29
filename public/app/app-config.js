@@ -5,10 +5,11 @@ require.config({
         'domReady':'./vendor/requirejs-domready/domReady',
         'angular-route':'./vendor/angular-route/angular-route',
         'angular-ui-router':'./vendor/angular-ui-router/release/angular-ui-router',
-        'navigation':'./scripts/controllers/navigation/index', // app $inject ID
-        'navigation-ctrl':'./scripts/controllers/navigation/navigation-ctrl', // controller AMD ID
-        'showdown-markup-bootstrap':'./scripts/directives/showdown-markup/index', // app $inject ID
-        'showdown-markup':'./scripts/directives/showdown-markup/showdown-markup' // directive AMD ID
+        'dm.base.controllers':'./scripts/controllers/index', // app $inject ID
+        'navigationController':'./scripts/controllers/navigation/navigation-ctrl', // controller AMD ID or directly inject on app definition
+
+        'dm.base.directives':'./scripts/directives/index', // app $inject ID
+        'showdownMarkup':'./scripts/directives/showdown-markup/showdown-markup' // directive AMD ID or directly inject on app definition
     },
 
     shim: {
@@ -20,6 +21,9 @@ require.config({
         },
         'angular-ui-router': {
             exports:'angular-ui-router'
+        },
+        'dm.navigationCtrl': {
+            exports:'dm.navigationCtrl'
         }
     },
 
