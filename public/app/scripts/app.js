@@ -1,6 +1,6 @@
-define(['angular', 'angular-route', 'angular-ui-router', 'dm.base.controllers', 'dm.base.directives'], function(angular) {
+define(['angular', 'angular-route', 'angular-ui-router', 'appDependencies'], function(angular) {
   var app;
-  app = angular.module('digitalmonkstudio', ['ui.router', 'digitalmonkstudio.controllers']);
+  app = angular.module('digitalmonkstudio', ['ui.router', 'digitalmonkstudio.directives', 'digitalmonkstudio.controllers']);
   app.config(function($stateProvider, $urlRouterProvider) {
     console.log('app::config::state provider initiated::');
     $stateProvider.state('blog', {

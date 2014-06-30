@@ -1,5 +1,6 @@
 define(['scripts/controllers/module-base'], function(module) {
   'use strict';
+  console.log('navigation controller :: init');
   return module.controller('NavigationCtrl', [
     '$scope', '$location', function($scope, $location) {
       $scope.navClass = function(page) {

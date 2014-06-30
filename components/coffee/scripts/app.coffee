@@ -1,5 +1,5 @@
-define ['angular','angular-route','angular-ui-router','dm.base.controllers','dm.base.directives'], (angular) ->
-    app = angular.module 'digitalmonkstudio',['ui.router','digitalmonkstudio.controllers']
+define ['angular','angular-route','angular-ui-router','appDependencies'], (angular) ->
+    app = angular.module 'digitalmonkstudio',['ui.router','digitalmonkstudio.directives','digitalmonkstudio.controllers']
 
     app.config( ($stateProvider, $urlRouterProvider) ->
             # $locationProvider.html5Mode true

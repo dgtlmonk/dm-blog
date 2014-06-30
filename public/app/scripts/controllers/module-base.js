@@ -1,5 +1,5 @@
-define(['angular'], function(angular) {
+define([], function() {
   'use strict';
-  console.log('digitalmonkstudio.controllers::init');
+  console.log('digitalmonkstudio.controllers base::init');
   return angular.module('digitalmonkstudio.controllers', []);
 });

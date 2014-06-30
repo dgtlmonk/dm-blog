@@ -1,6 +1,6 @@
 define ['scripts/controllers/module-base'], (module) ->
     'use strict'
-
+    console.log 'navigation controller :: init'
     module.controller 'NavigationCtrl', ['$scope','$location', ($scope, $location) ->
         $scope.navClass = (page) ->
             console.log $location.path().substring(1)
