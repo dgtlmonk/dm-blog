@@ -24,9 +24,7 @@
             </div>
             <nav class='header-nav'>
                 <ul class='header-nav-menu' ng-controller='NavigationCtrl'>
-                    <li ng-class="{active: isSelected('')}"><a ng-click="setSelection('')" href='/'>Blog</a></li>
-                    <li ng-class="{active: isSelected('collective-works')}"><a ng-click="setSelection('collective-works')" href='#/collective-works'>Collective Works</a></li>
-                    <li ng-class="{active: isSelected('about')}"><a ng-click="setSelection('about')" href="#/about">About</a></li>
+                    <li ng-repeat="nav in navigationItems" ng-class="{active: isActive(nav)}" ng-click=""><a href="#{{nav.path}}">{{nav.title}}</a></li>
                 </ul>
             </nav>
         </header>
