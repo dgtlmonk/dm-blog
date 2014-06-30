@@ -1,12 +1,10 @@
-define ['angular'], (angular) ->
+define [], () ->
     'use strict'
     console.log 'digitalmonkstudio.directives::init'
-    angular.module 'digitalmonkstudio.directives', []
-    
+    # angular.module 'digitalmonkstudio.directives', []
     # define app directives deps
     define ['showdownMarkup'], ->
         return
 
     return
-
 

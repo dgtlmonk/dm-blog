@@ -1,6 +1,5 @@
-define(['angular'], function(angular) {
+define([], function() {
   'use strict';
   console.log('digitalmonkstudio.directives::init');
-  angular.module('digitalmonkstudio.directives', []);
   define(['showdownMarkup'], function() {});
 });

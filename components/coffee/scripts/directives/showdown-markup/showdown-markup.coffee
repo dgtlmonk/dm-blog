@@ -1,4 +1,4 @@
-define ['scripts/directives/module-base'], (module) ->
+define ['dm.base.directives'], (module) ->
     'use strict'
     console.log '::showdownMarkup directive initiated ::'
 

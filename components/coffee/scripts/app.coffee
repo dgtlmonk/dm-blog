@@ -1,9 +1,9 @@
-define ['angular','angular-route','angular-ui-router','dm.base.controllers','dm.base.directives'], (angular) ->
-    app = angular.module 'digitalmonkstudio',['ui.router','digitalmonkstudio.controllers']
+define ['angular','angular-route','angular-ui-router','dm.index.directives'], (angular) ->
+    app = angular.module 'digitalmonkstudio',['ui.router','digitalmonkstudio.directives']
 
     app.config( ($stateProvider, $urlRouterProvider) ->
             # $locationProvider.html5Mode true
-            console.log 'app::config::state provider initiated::'
+            console.log 'app::config::state provider init::'
 
             $stateProvider
             .state 'blog', {

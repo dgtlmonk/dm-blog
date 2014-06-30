@@ -1,6 +1,7 @@
-define ['scripts/controllers/module-base'], (module) ->
+define ['dm.base.controllers'], (module) ->
     'use strict'
 
+    console.log 'navigation controllers::init'
     module.controller 'NavigationCtrl', ['$scope','$location', ($scope, $location) ->
         $scope.navClass = (page) ->
             console.log $location.path().substring(1)
