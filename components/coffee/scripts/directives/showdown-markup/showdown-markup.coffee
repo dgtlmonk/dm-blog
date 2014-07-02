@@ -8,5 +8,5 @@ define ['scripts/directives/module-base'], (module) ->
                 post:'='
             }
         }
-          
+    return
     

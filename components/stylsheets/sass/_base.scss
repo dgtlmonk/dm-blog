@@ -1,0 +1,12 @@
+@import 'compass';
+@import 'susy';
+@import 'breakpoint';
+
+body {
+    font: 100% $font-stack;
+    background:#fff;
+    margin:0;
+    padding:0;
+    @include container(80em); 
+}
+

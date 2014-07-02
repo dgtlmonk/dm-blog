@@ -4,13 +4,18 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     connect = require('gulp-connect'),
     coffee = require('gulp-coffee'),
+    stylus = require('gulp-stylus'),
     sourcemaps = require('gulp-sourcemaps'),
+    compass = require('gulp-compass'),
+    minifyCSS = require('gulp-minify-css'),
+    nib = require('nib'),
     merge = require('merge-stream');
 
 
 
 var onError = function (err){
-    console.log(err);
+
+    console.log('An Error occured: ' + err);
 }
 
 
@@ -20,7 +25,7 @@ var paths = {
      images:[],
 
      // stylesheets
-    stylus_src:['./components/stylsheets/stylus/*.styl'],
+    stylus_src:['./components/stylsheets/stylus/layout2.styl'],
     sass_src:['./components/stylsheets/sass/*.scss'],
     styles_dest:'./public/app/css/',
 
@@ -57,6 +62,30 @@ gulp.task('sass',function(){
         .pipe(gulp.dest(paths.styles_dest))
 })
 
+gulp.task('compass',function(){
+    return gulp.src(paths.sass_src)
+        .pipe(plumber({
+            errorHandler: onError
+        }))
+        .pipe(compass({
+            sass: './components/stylsheets/sass',
+            css:'./public/app/css',
+            require :['susy','breakpoint']
+        }))
+        // .pipe(minifyCSS())
+        .pipe(gulp.dest(paths.styles_dest))
+})
+
+
+gulp.task('stylus', function (){
+    return gulp.src(paths.stylus_src)
+        .pipe(stylus({
+           use:[nib()],
+           cache: false
+        }))
+        .pipe(gulp.dest(paths.styles_dest))
+})
+
 gulp.task('coffee', function (){
     var bootstrap = gulp.src(paths.coffee_app_bootstrap_src )
                     .pipe(plumber({
@@ -85,10 +114,12 @@ gulp.task('coffee', function (){
 
 gulp.task('watch', function (argument) {
     lr.listen();
-    gulp.watch(paths.sass_src,['sass']);
+    // gulp.watch(paths.sass_src,['sass']);
+    gulp.watch(paths.sass_src,['compass']);
+    gulp.watch('./components/stylsheets/stylus/*',['stylus']);
     gulp.watch([paths.coffee_app_bootstrap_src, paths.coffee_app_scripts_src],['coffee']);
-    gulp.watch([paths.sass_src, paths.html, paths.coffee_app_bootstrap_src, paths.coffee_app_scripts_src]).on('change', lr.changed);
+    gulp.watch(['./components/stylsheets/stylus/*' ,paths.sass_src, paths.html, paths.coffee_app_bootstrap_src, paths.coffee_app_scripts_src]).on('change', lr.changed);
 
-});
+})
 
-gulp.task('default',['coffee','sass','watch','connect']);
+gulp.task('default',['stylus','coffee','compass','watch','connect']);

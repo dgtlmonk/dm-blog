@@ -16,17 +16,13 @@ define(['scripts/controllers/module-base'], function(module) {
         }
       ];
       $scope.isSelected = function(nav) {
+        var isActive;
         console.log('@isSelected called');
-        console.log(nav);
-        console.log($location.path());
-        if (nav.path === $location.path()) {
-          return true;
-        } else {
-          return false;
-        }
+        isActive = nav.path === $location.path() ? true : false;
+        console.log(isActive);
+        return isActive;
       };
-      $scope.setSelection = function(section) {
-        console.log('selection set to ' + section);
+      $scope.setSelection = function(oNav) {
         $scope.selected = section;
       };
       $scope.navClass = function(page) {

@@ -1,0 +1,9 @@
+.post {
+  background: #000;
+  font: 12px Helvetica, Arial, sans-serif;
+  background: -webkit-linear-gradient(top, #fff, #000);
+  background: -moz-linear-gradient(top, #fff, #000);
+  background: -o-linear-gradient(top, #fff, #000);
+  background: -ms-linear-gradient(top, #fff, #000);
+  background: linear-gradient(to bottom, #fff, #000);
+}

@@ -11,14 +11,17 @@ define ['scripts/controllers/module-base'], (module) ->
 
         $scope.isSelected = (nav) ->
             console.log '@isSelected called'
-            console.log nav
-            console.log $location.path()
-            if nav.path is $location.path() then true else false
+            # console.log nav
+            # console.log $location.path()
+            isActive = if nav.path is $location.path() then true else false
+            console.log isActive
+            isActive
             # $scope.selected is section
            
 
-        $scope.setSelection = (section) ->
-            console.log 'selection set to ' + section
+        $scope.setSelection = ( oNav ) ->
+            # console.log 'selection set to ' + section
+            
             $scope.selected = section
             return
 

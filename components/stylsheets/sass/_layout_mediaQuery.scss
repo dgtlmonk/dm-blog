@@ -5,6 +5,9 @@
 // Layout Reference
 // http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 
+@include border-box-sizing;
+
+$medium-layout: 47em;
 
 $_q_smartphones: "only screen and (min-device-width : 320px) and (max-device-width : 480px)";
 $q_smartphones: "only screen and (min-device-width : 20em) and (max-device-width : 30em)";
@@ -18,7 +21,12 @@ $q_desktop: "only screen and (min-width : 76.5em)";
 
 $retina: "only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2)";
 
-
+.baz {
+    @include breakpoint ($breakpoint-medium-width) {
+        background:red;
+        border: 1px solid;
+    }
+}
 /* for high resolution display */
 @media #{$retina}, only screen and (min-device-pixel-ratio: 2) {
 
@@ -131,3 +139,6 @@ ul.header-nav-menu li {
     background:#999 url(../../assets/images/logo.png);
 
 }
+
+
+
