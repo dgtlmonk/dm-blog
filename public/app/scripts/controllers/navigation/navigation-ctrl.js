@@ -20,6 +20,8 @@ define(['scripts/controllers/module-base'], function(module) {
     $scope.$watch((function() {
       return $location.path();
     }, function(path) {}));
+
+    /* How NOT TO CREATE A NAV :D this would be called several times */
     $scope.isSelected = function(nav) {
       var isActive;
       isActive = nav.path === $location.path() ? true : false;

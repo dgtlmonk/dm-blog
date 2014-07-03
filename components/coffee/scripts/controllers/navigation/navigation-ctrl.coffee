@@ -21,6 +21,8 @@ define ['scripts/controllers/module-base'], (module) ->
 
         )
         
+
+        ### How NOT TO CREATE A NAV :D this would be called several times ###
         $scope.isSelected = (nav) ->
             # console.log '@isSelected called'
             # console.log nav
