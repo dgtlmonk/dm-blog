@@ -17,11 +17,12 @@ define(['scripts/controllers/module-base'], function(module) {
         title: 'About'
       }
     ];
+    $scope.$watch((function() {
+      return $location.path();
+    }, function(path) {}));
     $scope.isSelected = function(nav) {
       var isActive;
-      console.log('@isSelected called');
       isActive = nav.path === $location.path() ? true : false;
-      console.log(isActive);
       return isActive;
     };
     $scope.setSelection = function(oNav) {

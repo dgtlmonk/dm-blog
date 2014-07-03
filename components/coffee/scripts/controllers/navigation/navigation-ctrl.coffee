@@ -10,14 +10,23 @@ define ['scripts/controllers/module-base'], (module) ->
             { path: '/collective-works', title:'Collective Works' }        
             { path: '/about', title:'About' }        
         ]
+        
+        $scope.$watch (
+            () ->
+                $location.path()
 
+            (path) ->
+               # console.log path
+                return
 
+        )
+        
         $scope.isSelected = (nav) ->
-            console.log '@isSelected called'
+            # console.log '@isSelected called'
             # console.log nav
             # console.log $location.path()
             isActive = if nav.path is $location.path() then true else false
-            console.log isActive
+            # console.log isActive
             isActive
             # $scope.selected is section
            

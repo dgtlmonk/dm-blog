@@ -1,11 +1,15 @@
 define(['scripts/directives/module-base'], function(module) {
   'use strict';
-  module.directive('showdownMarkup', ["$rootScope", "$http", function($rootScope, $http) {
+
+  /* @ngInject */
+  var ShowdowMarkup;
+  ShowdowMarkup = function($rootScope, $http) {
     return {
       restrict: 'EA',
       scope: {
         post: '='
       }
     };
-  }]);
+  };
+  module.directive('showdownMarkup', ShowdowMarkup);
 });

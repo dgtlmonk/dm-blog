@@ -24,8 +24,8 @@
                 </div>
             </div>
             <nav class='header-nav'>
-                <ul class='header-nav-menu' ng-controller='NavigationCtrl'>
-                    <li ng-repeat="nav in navigationItems" ng-class="{active: isSelected(nav)}"><a href="#{{nav.path}}">{{nav.title}}</a></li>
+                <ul class='header-nav-menu main-navigation' ng-controller='NavigationCtrl'>
+                    <li ng-repeat="nav in navigationItems"><a href="#{{nav.path}}">{{nav.title}}</a></li>
                 </ul>
             </nav>
         </header>

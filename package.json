@@ -25,6 +25,7 @@
     "matchdep": "~0.1.2",
     "merge-stream": "^0.1.1",
     "ng-annotate": "^0.9.6",
+    "ng-annotate-uglify-js-brunch": "^1.7.4",
     "nib": "^1.0.3",
     "ui-router": "0.0.1"
   }
