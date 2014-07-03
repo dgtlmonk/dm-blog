@@ -1,0 +1,28 @@
+{
+  "name": "DM Blog",
+  "version": "0.1.0",
+  "homepage": "https://github.com/dgtlmonk/grunt-auto-reload",
+  "authors": [
+    "Joel Pablo <joel.pablo@digitalmonkstudio.com>"
+  ],
+  "description": "DigitalmonkStudio Blog/Portfolio site",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "./public/app/vendor"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.10",
+    "angular": "~1.2.16",
+    "requirejs-domready": "~2.0.1",
+    "requirejs": "~2.1.14",
+    "jquery": "~2.1.1",
+    "angular-route": "~1.2.19"
+  }
+}

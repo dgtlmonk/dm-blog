@@ -1,0 +1,144 @@
+
+// Media Queries in EM
+// $target_px / 16px  : $em;
+//
+// Layout Reference
+// http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+@include border-box-sizing;
+
+$medium-layout: 47em;
+
+$_q_smartphones: "only screen and (min-device-width : 320px) and (max-device-width : 480px)";
+$q_smartphones: "only screen and (min-device-width : 20em) and (max-device-width : 30em)";
+
+$_q_tablets: "only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
+$q_tablets: "only screen and (min-device-width : 48em) and (max-device-width : 64em)";
+
+$_q_desktop: "only screen and (min-width : 1224px)";
+$q_desktop: "only screen and (min-width : 76.5em)";
+
+
+$retina: "only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2)";
+
+.baz {
+    @include breakpoint ($breakpoint-medium-width) {
+        background:red;
+        border: 1px solid;
+    }
+}
+/* for high resolution display */
+@media #{$retina}, only screen and (min-device-pixel-ratio: 2) {
+
+}
+
+/* Smartphones (portrait and landscape) -----------  */
+@media #{$q_smartphones}, screen and (min-width:20em) and (max-width:30em) { 
+     header {
+        width:100%;
+        text-align:center;
+    }
+
+    .header-logo {
+        display:inline-block;
+        margin: 0 auto;
+        background:#000 url(../../assets/images/logo.png) no-repeat;
+    }
+
+    .header-nav {
+        margin-top:-1em;
+    }
+
+    ul.header-nav-menu {
+        padding:1em;
+    }
+
+
+}
+
+
+/* iPads (portrait and landscape) -----------  */
+@media #{$q_tablets}, screen and (min-width:30em) and (max-width:64em) {
+    
+    .header-signature {
+        padding:2em;
+    }
+
+    .header-logo {
+        background:#999;
+        float:left;
+        margin-right:1em;
+    }
+
+    header.main {
+        zoom: 1;
+        padding-bottom:1em;
+    }
+
+    header.main:before,
+    header.main:after {
+        content: "";
+        display: table;
+    }
+    header.main:after {
+        clear: both;
+    }
+
+    header {
+        padding-top:1em;
+    }
+
+
+}
+
+/*  Desktops and laptops -----------  */
+@media #{$q_desktop}, screen and (min-width: 64em){
+
+    body { 
+      background:#999;
+    }
+}
+
+
+.clearfix {
+      zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.main {
+    border:0;
+    margin:0;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+ul.header-nav-menu {
+   list-style:none;
+   color:$primary-text-color;
+}
+
+ul.header-nav-menu li {
+    display:inline;
+    margin:.5em;
+    padding:.5em;
+}
+
+.header-logo {
+    width:222px;
+    height:156px;        
+    background:#999 url(../../assets/images/logo.png);
+
+}
+
+
+
