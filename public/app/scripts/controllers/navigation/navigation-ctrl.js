@@ -1,8 +1,11 @@
 define(['scripts/controllers/module-base'], function(module) {
   'use strict';
+  var NavigationController;
   console.log('navigation controller :: init');
-  return module.controller('NavigationCtrl', ["$scope", "$location", function($scope, $location) {
-     $scope.navigationItems = [
+
+  /* @ngInject */
+  NavigationController = function($scope, $location) {
+    $scope.navigationItems = [
       {
         path: '',
         title: 'Blog'
@@ -35,5 +38,6 @@ define(['scripts/controllers/module-base'], function(module) {
         return '';
       }
     };
-  } ]);
+  };
+  return module.controller('NavigationCtrl', NavigationController);
 });

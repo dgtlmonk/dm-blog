@@ -1,7 +1,10 @@
+
 define ['scripts/controllers/module-base'], (module) ->
     'use strict'
     console.log 'navigation controller :: init'
-    module.controller 'NavigationCtrl', ($scope, $location) ->
+
+    ### @ngInject ###
+    NavigationController = ($scope, $location) ->
         $scope.navigationItems = [
             { path: '', title:'Blog' }        
             { path: '/collective-works', title:'Collective Works' }        
@@ -34,4 +37,11 @@ define ['scripts/controllers/module-base'], (module) ->
             alert 'yo'
             if page is currentRoute then 'active-nav' else ''
         return
-    
+
+
+
+    module.controller 'NavigationCtrl', NavigationController
+            
+
+
+
