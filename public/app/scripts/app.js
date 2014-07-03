@@ -1,7 +1,7 @@
 define(['angular', 'angular-route', 'angular-ui-router', 'appDependencies'], function(angular) {
   var app;
   app = angular.module('digitalmonkstudio', ['ui.router', 'digitalmonkstudio.directives', 'digitalmonkstudio.controllers']);
-  app.config(function($stateProvider, $urlRouterProvider) {
+  app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
     console.log('app::config::state provider initiated::');
     $stateProvider.state('blog', {
       url: '',
@@ -13,6 +13,6 @@ define(['angular', 'angular-route', 'angular-ui-router', 'appDependencies'], fun
       url: '/collective-works',
       templateUrl: './app/partials/collective-works/collective-works.html'
     });
-  });
+  }]);
   return app;
 });

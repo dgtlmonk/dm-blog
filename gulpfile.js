@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     minifyCSS = require('gulp-minify-css'),
     nib = require('nib'),
+    ngAnnotate = require('gulp-ng-annotate'),
     merge = require('merge-stream');
 
 
@@ -94,6 +95,7 @@ gulp.task('coffee', function (){
                     .pipe(coffee({
                         bare:true
                     }))
+                    .pipe(ngAnnotate())
                     .pipe(gulp.dest(paths.coffee_app_bootstrap_dest))
 
     var scripts = gulp.src(paths.coffee_app_scripts_src)
@@ -104,6 +106,7 @@ gulp.task('coffee', function (){
                   .pipe(coffee({
                       bare:true
                   }))
+                  .pipe(ngAnnotate())
                   .pipe(sourcemaps.write({
                       addComment: false
                   }))
@@ -116,7 +119,7 @@ gulp.task('watch', function (argument) {
     lr.listen();
     // gulp.watch(paths.sass_src,['sass']);
     gulp.watch(paths.sass_src,['compass']);
-    gulp.watch('./components/stylsheets/stylus/*',['stylus']);
+   // gulp.watch('./components/stylsheets/stylus/*',['stylus']);
     gulp.watch([paths.coffee_app_bootstrap_src, paths.coffee_app_scripts_src],['coffee']);
     gulp.watch(['./components/stylsheets/stylus/*' ,paths.sass_src, paths.html, paths.coffee_app_bootstrap_src, paths.coffee_app_scripts_src]).on('change', lr.changed);
 
