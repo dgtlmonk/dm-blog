@@ -9,10 +9,9 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     minifyCSS = require('gulp-minify-css'),
     nib = require('nib'),
-    uglify = require('ng-annotate-uglify-js-brunch'),
+    uglify = require('gulp-uglify'),
     ngAnnotate = require('gulp-ng-annotate'),
     merge = require('merge-stream');
-
 
 
 var onError = function (err){
@@ -96,7 +95,7 @@ gulp.task('coffee', function (){
                         bare:true
                     }))
                     .pipe(ngAnnotate())
-                    // .pipe(uglify())
+                    //.pipe(uglify())
                     .pipe(gulp.dest(paths.coffee_app_bootstrap_dest))
 
     var scripts = gulp.src(paths.coffee_app_scripts_src)
@@ -108,7 +107,7 @@ gulp.task('coffee', function (){
                       bare:true
                   }))
                   .pipe(ngAnnotate())
-                  //.pipe(uglify())
+                  // .pipe(uglify())
                   .pipe(sourcemaps.write({
                       addComment: false
                   }))

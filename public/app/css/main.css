@@ -8,15 +8,15 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
-body:after {
+/* line 12, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/susy-2.0.0.rc.2/sass/susy/output/support/_clearfix.scss */
+body::after {
   content: " ";
   display: block;
   clear: both;
 }
 
-/* line 11, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_box-sizing.scss */
-*, *:before, *:after {
+/* line 11, ../../../../../../../../../usr/local/lib/ruby/gems/1.8/gems/susy-2.0.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+*, *::before, *::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

@@ -8,11 +8,7 @@ require.config({
         'jquery':'//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
 
         'appDependencies':'./scripts/app-deps',
-
-        'dm.index.controllers':'./scripts/controllers/index', // app $inject ID
         'navigationController':'./scripts/controllers/navigation/navigation-ctrl', // controller AMD ID or directly inject on app definition
-
-        'dm.index.directives':'./scripts/directives/index', // app $inject ID
         'showdownMarkup':'./scripts/directives/showdown-markup/showdown-markup', // directive AMD ID or directly inject on app definition
         'navigationDirective':'./scripts/directives/navigation/navigation' // directive AMD ID or directly inject on app definition
     },
